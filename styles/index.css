@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHIE */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%
+}
+
+.nav-link {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s;
+    color: #FFFFFF;
+}
+
+.nav-link:hover {
+    color:#12F910;
+    font-weight: 900;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container{
+    /* border: 2px dotted pink; */
+}
+
+.logo-size{
+    width: 150px;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.link-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    margin-bottom: 1em;
+}
+
+/* Header querie */
+@media (min-width: 750px) {
+    .header-container{
+        width: 70%;
+        margin: 0 auto;
+        flex-direction: row;
+        max-height: 4rem;
+    }
+
+    .nav-link {
+        margin-left: 2em;
+    }
+
+    .link-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+
+/* SECTIONS */
+/* main {
+    height: 100%;
+}
+section {
+    height: 100vh;
+} */
+
+/* HOME */
+
+#home {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 5px solid red;  */
+}
+
+.catch-phrase {
+    font-size: 3em;
+    border-left: 4px solid #12F910;
+    border-bottom: 4px solid #12F910;
+    padding-left: 0.2em;
+}
+
+.home-pic {
+    /* display: block; */
+    width: 90%;
+    max-height: 500px;
+    object-fit: cover;
+    /* border: 5px dotted black;  */
+}
+
+/* Home querie */
+
+@media (min-width: 750px) {
+    #home {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .catch-phrase {
+        font-size: 4em;
+    }
+
+    .home-pic {
+        /* display: block; */
+        width: 760px;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+/* PREISE */
+
+#preise {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.price-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@media (min-width: 750px) {
+    .price-container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .price-pic {
+        width: 80%%;
+    }
+
+}
