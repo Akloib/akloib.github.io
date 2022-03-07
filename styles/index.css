@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+/* ACCESSIBILITY */
+
+.sr-only {
+    visibility: hidden;
+}
+
 /* TYPOGRAPHIE */
 
 body {
@@ -15,7 +21,7 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     text-decoration: none;
-    transition: 0.2s;
+    transition: 0.5s;
     color: #FFFFFF;
 }
 
@@ -33,10 +39,12 @@ header {
 }
 
 .header-container {
+    border: 2px dotted pink;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    transition: 0.5s;
 }
 
 .logo-container{
@@ -44,26 +52,63 @@ header {
 }
 
 .logo-size{
-    width: 150px;
+    border: 2px dotted orange;
+    width: 150px; 
     object-fit: cover;
-    transition: 0.2s;
+    transition: .5s;
 }
 
 .link-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
     list-style: none;
+    gap: 1.5rem;
 }
 
-.nav-link {
-    margin-bottom: 1em;
+.mobile-nav-toggle{
+    display: none;
 }
 
-/* Header querie */
+@media (max-width: 750px) {
+
+    .link-container{
+        /* border: 2px dotted green; */
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        padding: min(30vh, 10rem) 2rem;
+        background-color: rgba(10, 9, 9, 0.8);
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .link-container[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle{
+        display: block;
+        position: absolute;
+        background-color: pink;
+        /* background-image: url('/images/menu.png'); */
+        background-repeat: no-repeat;
+        width: 2rem;
+        border: 2px dotted pink;
+        aspect-ratio: 1;
+        top: 1rem;
+        right: 1rem;
+        z-index: 9999;
+    }
+
+    .mobile-nav-toggle[aria-expanded='true']{
+        background: red;
+    }
+}
+
 @media (min-width: 750px) {
     .header-container{
-        width: 70%;
+        border: 2px solid red;
         margin: 0 auto;
         flex-direction: row;
         max-height: 4rem;
@@ -76,8 +121,7 @@ header {
     .link-container {
         display: flex;
         flex-direction: row;
-    }
-    
+    }    
 }
 
 /* SECTIONS */
@@ -117,7 +161,7 @@ section {
 
 /* Home querie */
 
-@media (min-width: 750px) {
+@media (min-width: 1100px) {
     #home {
         width: 90%;
         margin: 0 auto;

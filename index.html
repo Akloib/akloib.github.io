@@ -14,14 +14,25 @@
     
         <!-- Script -->
         <script src="./scripts/index.js"></script>
+        <script src="./scripts/nav.js" defer></script>
     </head>
     <body>
-        <header>
-            <nav class="header-container">
-                <div class="logo-container">
-                    <img class="logo-size" src="./images/Stempel_Logo_w.png" alt="Logo Velokurier">
-                </div>
-                <ul class="link-container">
+        <header class="header-container">
+            <div class="logo-container">
+                <img class="logo-size" src="./images/Stempel_Logo_w.png" alt="Logo Velokurier">
+            </div>
+
+            <button class="mobile-nav-toggle" 
+                    aria-controls="prime-nav" 
+                    aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+
+            <nav>
+                <ul 
+                    data-visible="false"
+                    id="prime-nav" 
+                    class="link-container">
                    <li><a class="nav-link" href="#home">Home</a></li>
                    <li><a class="nav-link" href="#preise">Preise</a></li> 
                    <li><a class="nav-link" href="#partnerinnen">Partner*innen</a></li>
@@ -65,6 +76,6 @@
                 <h2>fourr</h2>
             </section>
 
-        </main>        
+        </main> 
     </body>
 </html>
