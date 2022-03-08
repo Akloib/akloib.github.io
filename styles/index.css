@@ -39,12 +39,12 @@ header {
 }
 
 .header-container {
-    border: 2px dotted pink;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     transition: 0.5s;
+    max-height: 4rem;
 }
 
 .logo-container{
@@ -52,7 +52,6 @@ header {
 }
 
 .logo-size{
-    border: 2px dotted orange;
     width: 150px; 
     object-fit: cover;
     transition: .5s;
@@ -73,7 +72,6 @@ header {
 @media (max-width: 750px) {
 
     .link-container{
-        /* border: 2px dotted green; */
         position: fixed;
         z-index: 1000;
         inset: 0 0 0 30%;
@@ -90,15 +88,16 @@ header {
     .mobile-nav-toggle{
         display: block;
         position: absolute;
+        border: none;
         background-color: pink;
         /* background-image: url('/images/menu.png'); */
         background-repeat: no-repeat;
         width: 2rem;
-        border: 2px dotted pink;
         aspect-ratio: 1;
         top: 1rem;
         right: 1rem;
         z-index: 9999;
+        transition: 0.5s;
     }
 
     .mobile-nav-toggle[aria-expanded='true']{
@@ -108,7 +107,6 @@ header {
 
 @media (min-width: 750px) {
     .header-container{
-        border: 2px solid red;
         margin: 0 auto;
         flex-direction: row;
         max-height: 4rem;
@@ -137,6 +135,7 @@ section {
 #home {
     width: 90%;
     margin: 0 auto;
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -152,11 +151,10 @@ section {
 }
 
 .home-pic {
-    /* display: block; */
     width: 90%;
+    padding-top: 2rem;
     max-height: 500px;
     object-fit: cover;
-    /* border: 5px dotted black;  */
 }
 
 /* Home querie */
@@ -164,6 +162,7 @@ section {
 @media (min-width: 1100px) {
     #home {
         width: 90%;
+        padding-top: 0;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
@@ -177,6 +176,7 @@ section {
 
     .home-pic {
         /* display: block; */
+        padding-top: 0;
         width: 760px;
         max-height: 100%;
         object-fit: cover;
@@ -186,9 +186,10 @@ section {
 
 /* PREISE */
 
-#preise {
+#price {
     width: 90%;
     margin: 0 auto;
+    padding-top: 4rem;
 }
 
 .price-container {
@@ -199,8 +200,26 @@ section {
     align-items: center;
 }
 
+.price-pic{
+    padding: 2rem 2rem 2rem 2rem;
+    width: 100%;
+}
 
-@media (min-width: 750px) {
+.price-h2{
+    display: inline;
+    border-bottom: 4px solid #12F910;
+}
+
+.price-txt{
+    padding-top: 1rem;
+}
+
+.price-p{
+    padding-top: 1rem;
+}
+
+
+@media (min-width: 1100px) {
     .price-container {
         margin: 0 auto;
         display: flex;
@@ -209,8 +228,7 @@ section {
         justify-content: space-around;
     }
 
-    .price-pic {
-        width: 80%%;
+    .price-pic{
+        width: 200%;
     }
-
 }
