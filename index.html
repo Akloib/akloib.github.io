@@ -71,44 +71,88 @@
 
             <section id="partnerinnen">
                 <h2 class="part-h2">Partner*innen</h2>
-                <p class="part-p">Unsere dineste werden von folgenden Partner*innen wahr genommen.</p>
+                <p class="part-p">Unsere dineste werden, unter anderen, von folgenden Partner*innen wahr genommen.</p>
                 <dev class="part-grid">
-                    <img class="grid-item-1" src="./images/logos/bima_logo_300x300px.png">
-                    <img class="grid-item-2" src="./images/logos/Hacklaender_claim.png">
-                    <img class="grid-item-3" src="./images/logos/KVG Bildmarke RGB.jpg">
-                    <img class="grid-item-4" src="./images/logos/kvv_logo_neu.png">
-                    <img class="grid-item-5" src="./images/logos/NVV_Logo_Schwarz-01.png">
-                    <img class="grid-item-6" src="./images/logos/POLYMA Logo.png">
-                    <img class="grid-item-7" src="./images/logos/RSE-Logo.png">
-                    <img class="grid-item-8" src="./images/logos/STW_AG_4c.jpg">
-                    <img class="grid-item-9" src="./images/logos/zukunftplus000.jpg">
+                    <img class="grid-item-1" src="./images/logos/bima_logo_300x300px.png" alt="company logo">
+                    <img class="grid-item-2" src="./images/logos/Hacklaender_claim.png" alt="company logo">
+                    <img class="grid-item-3" src="./images/logos/KVG Bildmarke RGB.jpg" alt="company logo">
+                    <img class="grid-item-4" src="./images/logos/kvv_logo_neu.png" alt="company logo">
+                    <img class="grid-item-5" src="./images/logos/NVV_Logo_Schwarz-01.png" alt="company logo">
+                    <img class="grid-item-6" src="./images/logos/POLYMA Logo.png" alt="company logo">
+                    <img class="grid-item-7" src="./images/logos/RSE-Logo.png" alt="company logo">
+                    <img class="grid-item-8" src="./images/logos/STW_AG_4c.jpg" alt="company logo">
+                    <img class="grid-item-9" src="./images/logos/zukunftplus000.jpg" alt="company logo">
                 </dev>
             </section>
 
             <section id="kontakt">
-                <h2 class="kontakt-h2">Kontakt</h2>
                 <dev class="kontakt-container">
-                    <p class="kontakt-txt">
+                    <div class="kontakt-txt">
+                        <h2 class="kontakt-h2">Kontakt</h2>
+                        <p>
                         Architecto sunt dolor non aspernatur. Ut consectetur deleniti et et quod rerum. 
                         Dolor ad nam id id est ut. Laudantium aut consequatur animi ab culpa est. 
                         Accusamus qui temporibus molestias temporibus deserunt perspiciatis quos. 
                         Placeat ut dicta nesciunt esse reiciendis dolorem distinctio.
                     </p>
-                    <form class="kontakt-form">
-                        <p>form kommt hier</p>
+                    </div>
 
+                    <form id="kontakt-form" class="kontakt-form">
+                        <label id="first-name-label" for="first-name">First name</label>
+                        <input id="first-name" type="text" placeholder="Enter your first name" required>
+                        <label id="last-name-label" for="last-name">Last name</label>
+                        <input id="last-name" type="text" placeholder="Enter your last name" required>
+                        <label id="phone-label" for="phone">Phonenumber</label>
+                        <input id="phone" type="number" placeholder="Enter your phonenumber" required>
+                        <label id="mail-label" for="mail">Mail</label>
+                        <input id="mail" type="email" placeholder="Enter your mail" required>
+                        
+                        <div class="check-group">
+                            <div>
+                                <label for="auftrag">Auftrag</label>
+                                <input id="auftrag" class="check-btn" type="checkbox" value="Auftrag">
+                            </div>
+                            <div>
+                                <label for="job">Jobanfrage</label>
+                                <input id="job" class="check-btn" type="checkbox" value="Jobanfrage">
+                            </div>
+                            <div>
+                                <label for="hello">Sag Hallo</label>
+                                <input id="hello" class="check-btn" type="checkbox" value="Hello">
+                            </div>
+                        </div>
+
+                        <div class="txt">
+                            <label>Schreib uns:</label>
+                            <textarea></textarea>
+                        </div>
+
+                        <input class="sub-button" id="submit" type="submit" value="Submit">
                     </form>
                 </dev>
             </section>
         </main> 
         <footer>
             <div class="footer-content">
-                <h3>Velokurier Kassel</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <ul class="socials">
-                    <li><a href="https://www.facebook.com/profile.php?id=100008360506602" target="blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/velokurier_kassel/" target="blank"><i class="fa fa-instagram"></i></a></li>
-                </ul>
+
+                <img class="herkules-art" src="./images/herkules.png" alt="herkules art">
+                
+                <div class="footer-txt">
+                    <img class="logo-size-footer" src="./images/Stempel_Logo_w.png" alt="Logo Velokurier">
+                    <div class="footer-links">
+                        <ul class="txt-links">
+                            <li><a href="#">AGB</a></li>
+                            <li><a href="#">Ipressum</a></li>
+                        </ul>
+                        <ul class="socials">
+                            <li><a href="https://www.facebook.com/profile.php?id=100008360506602" target="blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                            <li><a href="https://www.instagram.com/velokurier_kassel/" target="blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+                            <li><a href="#" target="blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <img class="rac-art" src="./images/raccoon.png" alt="raccoon">
                 
             </div>
         </footer>
